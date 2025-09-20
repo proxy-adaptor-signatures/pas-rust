@@ -1,0 +1,42 @@
+[package]
+name = "sparkle_algo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies.luban_core]
+path = "../luban_core"
+
+[dependencies.xuanmi_base_support]
+git = "https://github.com/taiyi-research-institute/xuanmi_base_support"
+rev = "731cb963ba00cbc1adf26645eae8a92f3733c76b"
+
+#region External Dependencies
+
+[dependencies]
+rocket = { version = "0.5.0-rc.1", features = ["json"] }
+thiserror = "1.0"
+anyhow = "1.0"
+serde = "1.0"
+serde_json = "1.0"
+curve25519-dalek = { version = "4.1.3", features = ["serde", "rand_core"] }
+rand = "0.7"
+rand_core = "0.6"
+sha2 = "0.10.9"
+sha3 = "0.10.8"
+reqwest = { version = "0.10.1", default-features = false, features = ["native-tls", "json", "blocking"] }
+uuid = { version = "0.8", features = ["v4"] }
+aes-gcm = { version = "0.9", features = ["std"] }
+hex = "0.4"
+zeroize = { version = "1", features = ["zeroize_derive"] }
+hmac = { version = "0.11.0", features = ["std"] }
+chacha20poly1305 = "0.10.1"
+bincode = "1.3"
+k256 = { version = "0.13", features = ["arithmetic", "serde", "std"] }
+secp256k1 = { version = "0.31.1", default-features = true, features = ["rand", "serde", "recovery"] }
+paillier-zk = { version = "0.4.2", default-features = true, features = ["serde", "__internal_doctest"] }
+fast-paillier = { version = "0.1.1", default-features = true, features = ["serde"] }
+rug = "1.24"
+generic-ec = {version = "0.4.5", features = ["curve-secp256k1"]}
+log = "0.4"
+
+#endregion
